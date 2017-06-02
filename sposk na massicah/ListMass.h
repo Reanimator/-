@@ -36,7 +36,7 @@ template <class T>
 	for(int i=0; i<maxCount; i++)
 	{ 
 		ukozateli[i]=-1;
-		inform[i]=0;
+		inform[i]=T();
 	}
 }
 
