@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 #include <iostream>
+#include <direct.h>
 
 template <class T>
 class SpisokMass
@@ -24,6 +25,13 @@ class SpisokMass
 	void add_start(T);
 	void add_end(T);
 	bool is_end(int);
+
+	void addPath()
+	{
+		char cwd[FILENAME_MAX];
+		_getcwd(cwd, sizeof(cwd));
+		add_start(cwd);
+	}
 };
  
 template <class T>

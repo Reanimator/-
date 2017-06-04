@@ -7,10 +7,8 @@ int main()
 {
    SpisokMass<std::string> a(200);
    setlocale(LC_ALL, "RUSSIAN");
-   char cwd[FILENAME_MAX];
-   _getcwd(cwd, sizeof(cwd));
-   a.add_start(cwd);
 
+   a.addPath();
    for(int i=a.get_start();!a.is_end(i);i=a.get_next_element(i))
    {
 	   std:: cout<<a.get_element(i)<<" ";
